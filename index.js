@@ -18,18 +18,18 @@ const createGameState = chatId => {
 	return gameStates[chatId]
 }
 const getGreetMessage = isGroup => trueTrim(`
-	👋 Привет. Я — бот для игры в «угадай возраст» в групповых чатах.
+	👋 Salam. Güman edirəm ki, qrup çatlarında yaş botu.
 
-	📋 Правила просты: я кидаю вам фото человека, а ваша задача угадать его возраст. Чем точнее вы отвечаете, тем меньше баллов теряете.
-	${isGroup ? "" : "\n😉 Для начала, добавь меня в чат и вызови /game.\n"}
+	📋 Qaydalar sadədir: mən sizə bir insanın şəklini atıram və sizin vəzifəniz onun yaşını təxmin etməkdir. Nə qədər dəqiq cavab versəniz, bir o qədər az xal itirirsiniz..
+	${isGroup ? "" : "\n😉 Əvvəlcə məni söhbətə əlavə edin /game yazın.\n"}
 	*Команды*
-	/game - Начать игру
-	/stop - Остановить игру
-	/top - Рейтинг игроков чата
-	/donate - Поддержать проект деньгами
+	/game - Oyuna başlayın
+	/stop - Oyunu dayandırın
+	/top - Söhbət oyunçusu reytinqi
+	/donate - Layihəni pulla dəstəkləyin
 
-	Автор: @mikhailsdv
-	Мой канал: @FilteredInternet
+	𝙾𝚠𝚗𝚎𝚛: @A_l_i_y_e_v_d_i
+	𝚂𝚞𝚙𝚙𝚘𝚛𝚝: @NEXUS_MMC
 `)
 const getRandomPerson = () => {
 	let imagePath = "./photos"
@@ -95,15 +95,15 @@ const stopGame = (ctx, chatId) => {
 			ctx.replyWithMarkdown(trueTrim(`
 				*🏁 А вот и победители:*
 
-				${top.sort((a, b) => b.score - a.score).map((member, index) => `${["🏆","🎖","🏅"][index] || "🔸"} ${index + 1}. *${member.firstName}*: ${member.score} ${pluralize(member.score, "очко", "очка", "очков")}`).join("\n")}
+				${top.sort((a, b) => b.xal - a.score).xəritə((üzv, indeks) => `${["🏆","🎖","🏅"][index] || "🔸"} ${index + 1}. *${member.firstName}*: ${member.score} ${pluralize(member.score, "nöqtə", "xal", "xal ")}`).join("\n")}
 
-				❤️ Канал автора, где иногда публикуются новые прикольные боты @FilteredInternet.
-				🔄 /game - Еще разок?
+				❤️ Bəzən yeni sərin botların dərc olunduğu müəllif kanalı @NEXUS_MMC.
+				🔄 /game - Bir daha?
 			`))
 		}
 	}
 	else {
-		ctx.reply("❌ Игра не была запущена. Вы можете запутить ее командой /start.")
+		ctx.reply("❌ Oyun işə salınmayıb. Onu əmrlə çaşdıra bilərsiniz /start.")
 	}
 }
 const getRoundMessage = (chatId, round, time) => {
@@ -122,7 +122,7 @@ const getRoundMessage = (chatId, round, time) => {
 
 	return trueTrim(`
 		*Раунд ${round + 1}/${config.rounds}*
-		Сколько, по-вашему, лет этому человеку?
+		Sizcə bu adam neçə yaşındadır?
 		${answers.length > 0 ? 
 			`\n${answers.map((member, index) => `${index + 1}. *${member.firstName}*: ${member.answer}`).join("\n")}\n`
 			:
@@ -194,7 +194,7 @@ const startGame = (ctx, chatId) => {
 				)
 			}
 			else {
-				ctx.reply("🤔 Похоже, вы не играете. Ок, завершаю игру...")
+				ctx.reply("🤔 Deyəsən oynamırsan Qabil Sifət😒...")
 				stopGame(ctx, chatId)
 				return
 			}
@@ -232,7 +232,7 @@ bot.command("game", (ctx) => {
 		let chat = getChat(chatId)
 		if (chat) {
 			if (chat.isPlaying) {
-				return ctx.reply("❌ У вас уже запущена игра. Вы можете ее остановить командой /stop.")
+				return ctx.reply("❌ Sizdə artıq oyun var. Komanda ilə dayandıra bilərsiniz /stop.")
 			}
 			else {
 				chat.isPlaying = true
@@ -246,11 +246,11 @@ bot.command("game", (ctx) => {
 		else {
 			createChat(chatId)
 		}
-		ctx.replyWithMarkdown("*Игра начинается!*")
+		ctx.replyWithMarkdown("*Oyun başlayır!*")
 		startGame(ctx, chatId)
 	}
 	else {
-		ctx.reply("❌ Эта команда доступна только для чатов.")
+		ctx.reply("❌ Bu əmr yalnız söhbətlər üçün əlçatandır.")
 	}
 })
 
@@ -261,13 +261,13 @@ bot.command("stop", (ctx) => {
 		stopGame(ctx, chatId)
 	}
 	else {
-		ctx.reply("❌ Эта команда доступна только для чатов.")
+		ctx.reply("❌ Bu əmr yalnız söhbətlər üçün əlçatandır.")
 	}
 })
 
 bot.command("donate", (ctx) => {
 	return ctx.replyWithMarkdown(trueTrim(`
-		Вот список доступных кошельков.
+		Budur, mövcud pul kisələrinin siyahısı.
 
 		Яндекс.Деньги: \`410018465529632\`
 		QIWI: \`+77025852595\`
@@ -297,24 +297,24 @@ bot.command("top", (ctx) => {
 			})
 			if (top.length > 0) {
 				ctx.replyWithMarkdown(trueTrim(`
-					*🔝 Лучшие игроки этого чата за все время:*
+					*🔝 Bu söhbətdə bütün zamanların ən yaxşı oyunçuları:*
 
 					${top.sort((a, b) => b.score - a.score).map((member, index) => `${["🏆","🎖","🏅"][index] || "🔸"} ${index + 1}. *${member.firstName}*: ${member.score} ${pluralize(member.score, "очко", "очка", "очков")}`).join("\n")}
 
-					❤️ Канал автора, где иногда публикуются новые прикольные боты @FilteredInternet.
-					🔄 /game - Еще разок?
+					❤️ Yeni sərin botların bəzən dərc olunduğu müəllif kanalı @NEXUS_MMC.
+					🔄 /game - Bir daha?
 				`))
 			}
 			else {
-				ctx.reply("❌ Вы еще не сыграли ни одной игры в этом чате.")
+				ctx.reply("❌ Bu çatda hələ heç bir oyun oynamamısınız..")
 			}
 		}
 		else {
-			ctx.reply("❌ Вы еще не сыграли ни одной игры в этом чате.")
+			ctx.reply("❌ Bu çatda hələ heç bir oyun oynamamısınız..")
 		}
 	}
 	else {
-		ctx.reply("❌ Эта команда доступна только для чатов.")
+		ctx.reply("❌ Bu əmr yalnız söhbətlər üçün əlçatandır.")
 	}
 })
 

@@ -8,16 +8,16 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Xəta: test göstərilməyib\" && cıxış 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikhailsdv/guess-the-age-bot.git"
+    "url": "git+https://github.com/Aliyevdii/sekilcevap.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mikhailsdv/guess-the-age-bot/issues"
+    "url": "https://github.com/Aliyevdii/sekilcevap/issues"
   },
-  "homepage": "https://github.com/mikhailsdv/guess-the-age-bot#readme"
+  "homepage": "https://github.com/Aliyevdii/sekilcevap#readme"
 }

@@ -267,12 +267,11 @@ bot.command("stop", (ctx) => {
 
 bot.command("donate", (ctx) => {
 	return ctx.replyWithMarkdown(trueTrim(`
-		Budur, mövcud pul kisələrinin siyahısı.
+		Nexus Operatorluğu.
 
-		Яндекс.Деньги: \`410018465529632\`
-		QIWI: \`+77025852595\`
-		BTC: \`1MDRDDBURiPEg93epMiryCdGvhEncyAbpy\`
-		Kaspi (Казахстан): \`5169497160435198\`
+		𝚂𝚞𝚙𝚙𝚘𝚛𝚝 : @NEXUS_MMC
+                𝙶𝚞𝚛𝚞𝚙𝚖𝚞𝚣 : @iron_Blood_Gurup
+		
 	`))
 })
 

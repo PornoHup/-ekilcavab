@@ -19,7 +19,10 @@
         "API_HASH": {
             "description": "API_HASH'iniz içinm my.telegram.org",
             "required": true
-        }
+        },
+        "BOT_TOKEN": {
+            "description": "your bot token from @BotFather",
+            "required": true
     },
     "addons": [],
     "buildpacks": [

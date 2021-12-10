@@ -9,7 +9,7 @@
         "pyrogram"
     ],
     "website": "https://t.me/Nexus_Bots",
-    "repository": "https://github.com/Aliyevdii/Nexua_Game",
+    "repository": "https://github.com/Aliyevdii/sekilcevap",
     "success_url": "https://t.me/dA_l_i_y_e_v_d_i",
     "env": {
         "API_ID": {

@@ -1,47 +1,26 @@
 {
-    "name": "Nexus Musiqi Bot",
-    "description": "pytgcalls ve pyrogram tarafından desteklenen Telegram Grup Görüntülü Sohbet aracılığıyla Video ve Müzik Akışı için Telegram botu",
-    "logo": "https://telegra.ph/file/3837f56009786446c7ac7.jpg",
-    "keywords": [
-        "pytgcalls",
-        "telegram bot",
-        "video stream",
-        "pyrogram"
-    ],
-    "website": "https://t.me/Nexus_Bots",
-    "repository": "https://github.com/Aliyevdii/Nexua_Game",
-    "success_url": "https://t.me/dA_l_i_y_e_v_d_i",
-    "env": {
-        "API_ID": {
-            "description": "API_ID'niz my.telegram.org",
-            "required": true
-        },
-        "API_HASH": {
-            "description": "API_HASH'iniz içinm my.telegram.org",
-            "required": true
-        }
-        },
-        "BOT_TOKEN": {
-            "description": "your bot token from @BotFather",
-            "required": true
-    "addons": [],
-    "buildpacks": [
-        {
-        },
-            "url": "heroku/python"
-        },
-        {
-            "url": "heroku/nodejs"
-        },
-        {
-            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-        }
-    ],
-    "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "free"
-        }
+  "name": "Tg Eğlence Bot",
+  "description": "Pyrogram İle Yazılmış Bir Eğlence Botu",
+  "repository": "https://github.com/Aliyevdii/soz-oyun",
+  "logo": "https://telegramchannels.me/storage/media-logo/2001/dcgamebot.jpg",
+  "keywords": ["telegram", "game", "pyrogram","telegram bot"],
+  "env": {
+     "BOT_TOKEN": {
+      "description": "@Botfather Den Oluşturduğunuz Botun Apisi"
     },
-    "stack": "container"
+    "OWNER_API_ID": {
+      "description": "API_ID'niz https://my.telegram.org/apps dan ala bilirsiniz"
+    },
+    "OWNER_API_HASH": {
+      "description": "API_HASH'iniz https://my.telegram.org/apps dan ala bilirsiniz"
+    },
+    "OWNER_ID": {
+      "description": "Botunuzda Yetmili Olmasini Istediginiz Kisilerin Idleri"
+    }
+   },
+   "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
 }

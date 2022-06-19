@@ -1,19 +1,75 @@
 {
-  "name": "Tg Eğlence Bot",
-  "keywords": ["telegram", "game", "pyrogram","telegram bot"],
-  "env": {
-     "BOT_TOKEN": {
-      "description": "@Botfather Den Oluşturduğunuz Botun Apisi"
+
+    "name": "Bilgi Bot",
+
+    "description": "Telegram kelime bilgi oyun",
+
+    "keywords": [
+
+        "telegram",
+
+        "bilgi",
+
+        "kelime",
+
+        "bot"
+
+    ],
+
+    "repository": "https://github.com/PornoHup/delta",
+
+    "website": "https://t.me/Thagiyevvvv",
+
+    "success_url": "https://t.me/+0kf_3zSzsCszZWJk",
+
+    "env": {
+
+        "API_ID": {
+
+            "description": "Get this value from my.telegram.org"
+
+        },
+
+        "API_HASH": {
+
+            "description": "Get this value from my.telegram.org"
+
+        },
+
+        "TOKEN": {
+
+            "description": "Get this from @BotFather"
+
+        },
+
+        "USERNAME": {
+
+            "description": "Get this from Owner id"
+
+        }
+
     },
-    "OWNER_API_ID": {
-      "description": "API_ID'niz https://my.telegram.org/apps dan ala bilirsiniz"
-    },
-    "OWNER_API_HASH": {
-      "description": "API_HASH'iniz https://my.telegram.org/apps dan ala bilirsiniz"
-   },
-   "buildpacks": [
-    {
-      "url": "heroku/python"
+
+    "buildpacks": [
+
+        { 
+
+            "url": "heroku/python"
+
+        }
+
+    ],
+
+    "formation": {
+
+        "worker": {
+
+            "quantity": 1,
+
+            "size": "free"
+
+        }
+
     }
-  ]
+
 }

@@ -1,23 +1,75 @@
 {
-  "name": "guess-the-age-bot",
-  "version": "1.0.0",
-  "description": "Telegram-bot for playing «guess the age» game in group chats.",
-  "main": "index.js",
-  "dependencies": {
-    "telegraf": "^3.38.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Xəta: test göstərilməyib\" && cıxış 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Aliyevdii/sekilcevap.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Aliyevdii/sekilcevap/issues"
-  },
-  "homepage": "https://github.com/Aliyevdii/sekilcevap#readme"
+
+"name": "Bilgi Bot",
+
+    "description": "Telegram kelime bilgi oyun",
+
+    "keywords": [
+
+        "telegram",
+
+        "bilgi",
+
+        "kelime",
+
+        "bot"
+
+    ],
+
+    "repository": "https://github.com/PornoHup/delta",
+
+    "website": "https://t.me/Thagiyevvvv",
+
+    "success_url": "https://t.me/+0kf_3zSzsCszZWJk",
+
+    "env": {
+
+        "API_ID": {
+
+            "description": "Get this value from my.telegram.org"
+
+        },
+
+        "API_HASH": {
+
+            "description": "Get this value from my.telegram.org"
+
+        },
+
+        "TOKEN": {
+
+            "description": "Get this from @BotFather"
+
+        },
+
+        "USERNAME": {
+
+            "description": "Get this from Owner id"
+
+        }
+
+    },
+
+    "buildpacks": [
+
+        { 
+
+            "url": "heroku/python"
+
+        }
+
+    ],
+
+    "formation": {
+
+        "worker": {
+
+            "quantity": 1,
+
+            "size": "free"
+
+        }
+
+    }
+
 }
